@@ -9,6 +9,7 @@ from flask import Flask, render_template
 from extensions import db, login_manager
 from models.user import User
 import os
+import socket
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secretkey'
@@ -57,7 +58,9 @@ def initialize_delivery_providers():
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    # los primeros 12 caracteres del ID del contenedor
+    container_id = socket.gethostname()[:12]
+    return render_template('home.html', container_id=container_id)
 
 
 if __name__ == '__main__':
