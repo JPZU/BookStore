@@ -58,9 +58,7 @@ def initialize_delivery_providers():
 
 @app.route('/')
 def home():
-    # los primeros 12 caracteres del ID del contenedor
-    container_id = socket.gethostname()[:12]
-    return render_template('home.html', container_id=container_id)
+    return render_template('home.html')
 
 
 if __name__ == '__main__':
