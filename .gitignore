@@ -1,0 +1,32 @@
+# Evita que el archivo de variables sensibles se suba
+.env
+
+# Carpetas y archivos de Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Entornos virtuales
+venv/
+.env/
+.venv/
+
+# Archivos de logs y bases de datos locales
+*.log
+*.sqlite
+*.db
+
+# Docker
+*.pid
+*.sock
+docker-compose.override.yml
+
+# VSCode y otras IDEs
+.vscode/
+.idea/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
